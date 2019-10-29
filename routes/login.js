@@ -26,7 +26,7 @@ app.post('/', (req, res)=>{
         }
 
         res.status(200).json({
-            mensaje: 'Bienvenido de nuevo ' + data.nombre
+            usuario: data
         })
     })
 })

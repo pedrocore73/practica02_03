@@ -5,6 +5,7 @@ var cors = require('cors');
 
 var usuario = require('./routes/usuario');
 var login = require('./routes/login');
+var autorizaciones = require('./routes/autorizaciones');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 
 app.use('/usuario', usuario);
 app.use('/login', login);
+app.use('/autorizaciones', autorizaciones);
 
 app.listen(3000, function(){
     console.log('Servidor Ok en http://localhost:3000');
